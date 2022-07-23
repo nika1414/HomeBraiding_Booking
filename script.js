@@ -4,10 +4,10 @@ window.onscroll = function () {
 };
 
 // Get the navbar
-var navbar = document.querySelector("header");
+let navbar = document.querySelector("header");
 
 // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+let sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
@@ -22,11 +22,11 @@ function myFunction() {
 }
 const menu = document.querySelector("ul");
 const menuItem = document.querySelectorAll("li");
-var allInputs = document.getElementsByTagName("input");
+let allInputs = document.getElementsByTagName("input");
 menuItem.forEach((el) => {
   el.addEventListener("click", () => {
     menu.style.position = "inherit";
-    for (var i = 0, max = allInputs.length; i < max; i++) {
+    for (let i = 0, max = allInputs.length; i < max; i++) {
       if (allInputs[i].type === "checkbox") allInputs[i].checked = false;
     }
   });
