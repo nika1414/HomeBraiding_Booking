@@ -1,0 +1,243 @@
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: cursive;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* NAVBAR STYLING STARTS */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(to right, rgb(255, 2, 44), rgb(255, 221, 226));
+  box-shadow: 0px 1px 4px rgb(255, 103, 128);
+  color: #fff;
+}
+.nav-links a {
+  color: #fff;
+}
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  background-color: rgb(255, 63, 128);
+  box-shadow: 0px 1px 4px rgb(255, 63, 128);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type="checkbox"] {
+  display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background: linear-gradient(to right, rgb(255, 2, 44), rgb(255, 221, 226));
+    margin-top: 10px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: rgb(255, 63, 128);
+    box-shadow: 0px 1px 4px rgb(255, 63, 128);
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: block;
+  }
+}
+
+.about-left {
+  box-shadow: 0px 1px 4px rgb(255, 103, 128);
+
+  background: linear-gradient(to right, rgb(255, 2, 44), rgb(255, 221, 226));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  color: #fff;
+}
+.about-left-content > div {
+  padding: 4rem 4rem 2.5rem 5rem;
+  text-align: center;
+
+  border-radius: 12px 12px 0 0;
+}
+.about-left-content {
+  box-shadow: 0px 0px 20px rgb(255, 145, 163);
+  border-radius: 12px;
+  width: 80%;
+}
+.about-img img {
+  display: block;
+  width: 200px;
+}
+.about-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.shadow {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 844px) {
+  .about-img {
+    width: 150px;
+    height: 150px;
+  }
+  .shadow {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.about-left-content h2 {
+  font-size: 2rem;
+  margin: 2.2rem 0 0.6rem 0;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid white;
+}
+.about-left-content h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 5px;
+  margin-top: 1.2rem;
+}
+.icons {
+  box-shadow: 0px 0px 20px rgb(255, 145, 163);
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+  border-radius: 0 0 12px 12px;
+}
+.icons li {
+  list-style-type: none;
+  background: linear-gradient(to right, rgb(255, 131, 152), rgb(255, 173, 185));
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.icons li:hover {
+  background: #edffec;
+  color: rgb(255, 69, 100);
+}
+
+#myWorksTitle {
+  display: flex;
+  font-size: 40px;
+  margin-top: -40px;
+  width: 100%;
+  justify-content: center;
+  padding: 40px;
+  color: white;
+  font: bold;
+}
+
+.container {
+  background: linear-gradient(to right, rgb(255, 2, 44), rgb(255, 221, 226));
+  box-shadow: 0px 1px 4px rgb(255, 63, 128);
+  padding: 50px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-gallery > li {
+  list-style: none;
+  flex-basis: 350px; /* width: 350px; */
+  height: 300px;
+}
+
+.image-gallery li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px white;
+}
+@media (max-width: 844px) {
+  .image-gallery > li {
+    flex-basis: 230px;
+    height: 200px;
+  }
+}
