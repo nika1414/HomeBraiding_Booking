@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 
 const url =
-  "mongodb+srv://nkayprod:homebraiding123@cluster0.ow8gu2q.mongodb.net/form";
+  "mongodb+srv://forSafety:ReasonsThisDatabaseDoesntExist@thenumber.ofwhat.mongodb.net/databaseName";
 mongoose.connect(url);
 
 //create a data schema
@@ -33,15 +33,15 @@ app.get("/results", (req, res) => {
     });
 });
 
-app.get("/dateResult", (req, res) => {
-  Note.findById("62ddb885549200362bcf53e6")
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+// app.get("/dateResult", (req, res) => {
+//   Note.findById("62ddb885549200362bcf53e6")
+//     .then((result) => {
+//       res.send(result);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
 
 app.get("/*", function (req, res) {
   res.sendFile(__dirname + "/index.html");
@@ -65,14 +65,14 @@ app.post("/", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "hotmail",
     auth: {
-      user: "nkayproductions@outlook.com",
-      pass: "Dragonlord123.",
+      user: "myEmail@outlook.com",
+      pass: "myPassword",
     },
   });
 
   const options = {
-    from: "nkayproductions@outlook.com",
-    to: "nikboiplays@gmail.com",
+    from: "myEmail@outlook.com",
+    to: "anyWhereYouWantDataToGo@gmail.com",
     subject: "New Customer",
     text: "Hi",
     html: output,
