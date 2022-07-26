@@ -1,0 +1,34 @@
+{
+  "name": "ddwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikaKotrikadze/HomeBraiding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikaKotrikadze/HomeBraiding/issues"
+  },
+  "homepage": "https://github.com/nikaKotrikadze/HomeBraiding#readme",
+  "dependencies": {
+    "application.js": "^1.3.5",
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express.js": "^1.0.0",
+    "index.js": "^0.0.3",
+    "mongoose": "^6.4.6",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.19",
+    "server.js": "^1.0.0",
+    "view.js": "^4.1.0"
+  }
+}
