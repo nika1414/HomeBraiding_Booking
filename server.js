@@ -33,16 +33,6 @@ app.get("/results", (req, res) => {
     });
 });
 
-// app.get("/dateResult", (req, res) => {
-//   Note.findById("62ddb885549200362bcf53e6")
-//     .then((result) => {
-//       res.send(result);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// });
-
 app.get("/*", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
